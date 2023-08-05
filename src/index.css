@@ -6,11 +6,11 @@
     @font-face{
         font-family: "Catchy";
         font-weight: 700;
-        src: url("./public/fonts/CatchyMager-Normal.ttf");
+        src: url("../fonts/CatchyMager-Normal.ttf");
     }
     @font-face{
         font-family: "CocoGothic";
         font-weight: 700;
-        src: url("./public/fonts/CocoGothic-Bold_trial.ttf");
+        src: url("../fonts/CocoGothic-Bold_trial.ttf");
     }
 }
