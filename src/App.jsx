@@ -15,22 +15,22 @@ function App() {
       <div className='relative h-[200vh]'>
         <Portada/>
       </div>
-      <section className='relative z-40 -mt-[100vh] min-h-screen bg-white p-[50px] 
+      <section className='relative z-40 -mt-[100vh] min-h-screen bg-white p-[30px] sm:p-[50px] 
         py-[75px] block md:flex'
       >
         <div className='w-full md:w-2/4 flex flex-col gap-8'>
-          <h3 className='text-6xl text-green-800 font-catchy'>Disfrutá en el centro de la ciudad de Ushuaia</h3>
-          <p className='text-[20px] text-gray-600 CocoGothic_trial'>
+          <h3 className='text-4xl sm:text-6xl text-green-800 font-catchy'>Disfrutá en el centro de la ciudad de Ushuaia</h3>
+          <p className='text-[17px] sm:text-[20px] text-gray-600 CocoGothic_trial'>
             Canal Beagle Hotel es un alojamiento 4 estrellas ubicado en pleno centro de la ciudad, 
             a pocos metros del Canal de Beagle y frente al Puerto de Ushuaia, con estacionamiento propio.
           </p>
-          <p className='text-[20px] text-gray-600 CocoGothic_trial'>
+          <p className='text-[17px] sm:text-[20px] text-gray-600 CocoGothic_trial'>
             Se encuentra situado en la misma manzana que el Hard Rock Café Ushuaia y se puede 
             llegar caminando a los principales comercios y museos y a los restaurantes más 
             importantes de la ciudad.
           </p>
         </div>
-        <div className='w-full md:w-2/4 flex justify-center pt-[30px]'>
+        <div className='h-full w-full md:w-2/4 flex justify-center pt-[30px]'>
           <img className='h-full pl-0 md:pl-[50px] object-cover' src={pic1}/>
         </div>
       </section>

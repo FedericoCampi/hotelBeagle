@@ -50,12 +50,12 @@ const promos = [
 
 const HabYPromo = () => {
   return (
-    <div className='px-[50px] h-full'>
+    <div className='px-[30px] sm:px-[50px] h-full'>
       <div className='h-full'>
         <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>Habitaciones</h2>
-        <div className='flex'>
+        <div className='flex flex-col sm:flex-row'>
           {habitaciones?.map(item => (
-            <div key={item.id} className='flex flex-col max-h-[500px] w-[35%] px-[10px]'>
+            <div key={item.id} className='flex flex-col sm:max-h-[400px] w-full sm:w-[35%] py-[10px] px-[10px]'>
               <img src={item.img} alt={item.tipo} className='object-cover min-h[200px] h-[40%]'/>
               <div className='flex flex-col justify-between mt-[15px] border border-gray-400 
                 p-[15px] text-gray-600 CocoGothic_trial'
@@ -72,12 +72,12 @@ const HabYPromo = () => {
       </div>
       <div className='h-full'>
         <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>Promociones</h2>
-        <div className='flex'>
+        <div className='flex flex-col sm:flex-row'>
           {promos?.map(item => (
-            <div key={item.id} className='flex flex-col max-h-[500px] w-[35%] px-[10px]'>
-              <img src={item.img} alt={item.title} className='object-cover min-h[200px] h-[40%]'/>
+            <div key={item.id} className='flex flex-col sm:max-h-[400px] w-full sm:w-[35%] py-[10px] px-[10px]'>
+              <img src={item.img} alt={item.title} className='object-cover max-h-[200px] h-[40%]'/>
               <div className='flex flex-col justify-between mt-[15px] border border-gray-400 
-              px-[15px] my-[20px] text-gray-600 CocoGothic_trial '
+              p-[15px] text-gray-600 CocoGothic_trial '
               >
                 <h3 className='text-2xl py-[20px]'>{item.title}</h3>
                 <p className='pb-[20px]'>{item.desc}</p>

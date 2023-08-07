@@ -72,16 +72,16 @@ const MidSection = () => {
 return (
     <div className=''>
         {infoMidSection?.map(item => (
-            <div key={item.id} className='flex flex-col p-[60px] h-full border border-green-500 sm:flex-row sm:border-0'>
+            <div key={item.id} className='flex flex-col p-[30px] sm:p-[60px] h-full border border-green-500 sm:flex-row sm:border-0'>
                 {item.id % 2 == 1 ? (
                     <div className='w-full sm:w-2/4 flex justify-center'>
                         <img src={item.img} alt={item.title} className='h-full object-cover'/>
                     </div>
                 ):
-                <div className='w-full sm:w-2/4 flex flex-col items-center p-[40px] justify-evenly'>
+                <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>
                     <h2 className='text-5xl text-green-800 font-catchy border-b-2 border-b-green-800 text-center'>{item.title}</h2>
                     <h4 className='text-4xl text-green-800 font-catchy text-center'>{item.subTitle}</h4>
-                    <p className='sm:px-[20px] md:px-[50px] px-[100px] text-center text-[18px] text-gray-600 
+                    <p className='text-center text-[18px] text-gray-600 
                         CocoGothic_trial'>{item.desc}
                     </p>
                         {item.icons?.map(icon => (
@@ -101,10 +101,10 @@ return (
                         <img src={item.img} alt={item.title} className='h-full object-cover'/>
                     </div>
                 ):
-                <div className='w-full sm:w-2/4 flex flex-col items-center p-[40px] justify-evenly'>
+                <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>
                     <p className='text-5xl text-center text-green-800 font-catchy border-b-2 border-b-green-800'>{item.title}</p>
                     <h4 className='text-4xl text-green-800 font-catchy text-center' >{item.subTitle}</h4>
-                    <p className='sm:px-[20px] md:px-[50px] px-[100px] text-center text-[18px] text-gray-600 
+                    <p className='text-center text-[18px] text-gray-600 
                         CocoGothic_trial'>{item.desc}
                     </p>
                     <div className='flex'>
