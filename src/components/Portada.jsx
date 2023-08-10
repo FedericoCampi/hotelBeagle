@@ -13,7 +13,7 @@ const Portada = () => {
     }, []);
 
     return (
-        <div className='sticky top-0 bg-green-800'>
+        <div className='sticky top-0 bg-[#1a3b1f]'>
             <img src={portada} alt='fondoPortada' 
                 className='h-screen w-full object-cover opacity-70'/>
             <div className='justify-evenly absolute top-0 text-white w-full h-full flex flex-col

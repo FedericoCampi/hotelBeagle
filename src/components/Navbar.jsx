@@ -44,7 +44,7 @@ const Navbar = () => {
         }, []);
 
     return (
-        <div className={`h-[125px] bg-[#4c645c] z-50 fixed top-0 w-full transition-all 
+        <div className={`h-[125px] bg-[#1a3b1f] z-50 fixed top-0 w-full transition-all 
             duration-[1000ms] ease-in-out ${isScrolled ? 'translate-y-0' : '-translate-y-full'}
             flex text-white py-[10px]`}
         >
@@ -82,13 +82,13 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="hidden lg:items-center lg:flex lg:justify-evenly flex-col flex-1 pr-[30px]">
-                <p className="text-[12px] mb-0">
+                <p className="px-[30px] text-[12px] mb-0">
                     Reservas:+54 02901 436100 (lun a vie 10-18hs, sáb 10-14hs)Recepción:+54 02901 42135
                 </p>
                 <button className="bg-white text-green-800 border border-green-800 p-[10px]"
                     style={{ display: 'inline-block', width: 'fit-content' }}
                 >
-                    RESERVAR ONLINE!
+                    RESERVAR AHORA!
                 </button>
             </div>
 
@@ -131,7 +131,7 @@ const Navbar = () => {
                         <button className="bg-white text-green-800 border border-green-800 p-[10px] w-[70%]"
                             style={{ display: 'inline-block' }}
                         >
-                            RESERVAR ONLINE!
+                            RESERVAR AHORA!
                         </button>
                     </div>
                 </Offcanvas.Body>

@@ -49,7 +49,7 @@ const Footer = () => {
 
 
 return (
-    <div className='bg-[#4c645c] p-[50px] text-white'>
+    <div className='bg-[#1a3b1f] p-[50px] text-white'>
         <div className='flex flex-col'>
             <h3 className='text-4xl font-catchy'>Canal Beagle Hotel</h3>
             <div className='flex items-end'>
