@@ -1,5 +1,5 @@
 import hab3adult from '../images/hab3adult.jpg'
-import suite from '../images/suite.webp'
+import suite from '../images/suite.jpg'
 import laptop from '../images/laptop.jpg'
 import spa from '../images/spa.jpg'
 import suitcase from '../images/suitcase.jpg'

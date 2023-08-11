@@ -1,4 +1,4 @@
-import portada from '../images/portada.webp'
+import portada from '../images/portada.jpg'
 import logo from '../images/logo.jpg'
 import downarrow from '../images/arrow-down.png'
 import { useEffect, useState } from 'react';
@@ -9,7 +9,7 @@ const Portada = () => {
 
     useEffect(() => {
       // Set the visibility to true after the component mounts to trigger the fade-in effect.
-      setIsDivVisible(true);
+        setIsDivVisible(true);
     }, []);
 
     return (
