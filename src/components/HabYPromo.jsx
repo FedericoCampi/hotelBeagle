@@ -50,7 +50,7 @@ const promos = [
 
 const HabYPromo = () => {
   return (
-    <div className='px-[30px] sm:px-[50px] h-full'>
+    <div className='pb-[20px] px-[30px] sm:px-[50px] h-full'>
       <div className='h-full'>
         <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>Habitaciones</h2>
         <div className='flex flex-col sm:flex-row'>

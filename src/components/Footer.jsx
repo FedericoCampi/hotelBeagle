@@ -52,7 +52,7 @@ return (
     <div className='bg-[#1a3b1f] p-[50px] text-white'>
         <div className='flex flex-col'>
             <h3 className='text-4xl font-catchy'>Canal Beagle Hotel</h3>
-            <div className='flex items-end'>
+            <div className='flex items-center'>
                 <img className='w-[21px]' src={location}/>
                 <h5 className='flex text-1xl pt-[10px] pl-[5px]'>Av. Maipú 547, Ushuaia, Argentina</h5>
             </div>
