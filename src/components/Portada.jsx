@@ -19,7 +19,7 @@ const Portada = () => {
             <div className='justify-evenly absolute top-0 text-white w-full h-full flex flex-col
                 items-center gap-0 md:gap-3'
             >
-                <h4 className={`text-4xl font-catchy ${
+                <h4 className={`text-5xl font-catchy pt-[10px] ${
                     isDivVisible ? 'fade-enter-active fade-exit' : 'opacity-0'
         }           transition-opacity duration-800`}>
                     Bienvenido a
