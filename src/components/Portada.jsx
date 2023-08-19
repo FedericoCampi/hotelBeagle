@@ -24,14 +24,14 @@ const Portada = () => {
         }           transition-opacity duration-800`}>
                     Bienvenido a
                 </h4>
-                <img className={`h-auto w-[100px] pt-[10px] ${
+                <img className={`h-auto w-[130px] sm:w-[80px] pt-[10px] ${
                     isDivVisible ? 'fade-enter-active fade-exit' : 'opacity-0'
         }           transition-opacity duration-1000`} src={logo} alt='logo'/>
                 <div className={`flex flex-col font-catchy items-center ${
                     isDivVisible ? 'fade-enter-active fade-exit' : 'opacity-0'
         }           transition-opacity duration-[1200ms]`}>
-                    <p className='text-[70px] sm:text-[110px] md:text-[130px] h-[80px] sm:h-[140px]'>Canal Beagle</p>
-                    <p className='text-[40px] md:text-[80px] text-start'>Hotel</p>
+                    <p className='text-[90px] sm:text-[110px] md:text-[130px] h-[80px] sm:h-[140px]'>Canal Beagle</p>
+                    <p className='text-[50px] md:text-[80px] text-start'>Hotel</p>
                 </div>
                 <div className={`flex flex-col items-center ${
                     isDivVisible ? 'fade-enter-active fade-exit' : 'opacity-0'
