@@ -24,7 +24,7 @@ const Portada = () => {
         }           transition-opacity duration-800`}>
                     Bienvenido a
                 </h4>
-                <img className={`h-[130px] pt-[10px] ${
+                <img className={`h-[150px] w-[100px] pt-[10px] ${
                     isDivVisible ? 'fade-enter-active fade-exit' : 'opacity-0'
         }           transition-opacity duration-1000`} src={logo} alt='logo'/>
                 <div className={`flex flex-col font-catchy items-center ${
