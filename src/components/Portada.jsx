@@ -19,7 +19,7 @@ const Portada = () => {
             <div className='justify-evenly absolute top-0 text-white w-full h-full flex flex-col
                 items-center gap-0 md:gap-3'
             >
-                <h4 className={`text-3xl CocoGothic_trial ${
+                <h4 className={`text-3xl font-catchy ${
                     isDivVisible ? 'fade-enter-active fade-exit' : 'opacity-0'
         }           transition-opacity duration-800`}>
                     Bienvenido a
