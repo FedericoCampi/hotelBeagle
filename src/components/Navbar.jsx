@@ -89,7 +89,7 @@ const Navbar = () => {
                 <button className="bg-white text-green-800 border border-green-800 p-[10px]"
                     style={{ display: 'inline-block', width: 'fit-content' }}
                 >
-                    RESERVAR AHORA!
+                    RESERVAR AHORA
                 </button>
             </div>
 
@@ -126,13 +126,10 @@ const Navbar = () => {
                         <button className="flex items-center gap-1"><img className="w-[30px]" src={brazil}/>PT</button>
                     </div>
                     <div className="text-white flex flex-col items-center">
-                        <p className="text-[12px]">
-                            Reservas:+54 02901 436100 (lun a vie 10-18hs, sáb 10-14hs)Recepción:+54 02901 42135
-                        </p>
                         <button className="bg-white text-green-800 border border-green-800 p-[10px] w-[70%]"
                             style={{ display: 'inline-block' }}
                         >
-                            RESERVAR AHORA!
+                            RESERVAR AHORA
                         </button>
                     </div>
                 </Offcanvas.Body>
