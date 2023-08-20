@@ -18,7 +18,7 @@ function App() {
       <section className='relative z-40 -mt-[100vh] min-h-screen bg-white p-[30px] sm:p-[50px] 
         py-[75px] block md:flex'
       >
-        <div className='w-full md:w-2/4 flex flex-col gap-8'>
+        <div id='hotel' className='w-full md:w-2/4 flex flex-col gap-8'>
           <h3 className='text-4xl sm:text-6xl text-green-800 font-catchy'>Disfrutá en el centro de la ciudad de Ushuaia</h3>
           <p className='text-[17px] sm:text-[20px] text-gray-600 CocoGothic_trial'>
             Canal Beagle Hotel es un alojamiento 4 estrellas ubicado en pleno centro de la ciudad, 

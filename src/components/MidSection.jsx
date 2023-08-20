@@ -84,16 +84,16 @@ return (
                     <p className='text-center text-[18px] text-gray-600 
                         CocoGothic_trial'>{item.desc}
                     </p>
-                        {item.icons?.map(icon => (
-                            <div className='flex flex-col items-center' key={icon.name}
-                                style={{width:` ${100/item.icons.length}%`}}
-                            >
-                                <img src={icon.img} alt={icon.desc} className='h-[50px]'/>
-                                <p className='text-center text-[14px] text-gray-600 CocoGothic_trial'>
-                                    {icon.name}
-                                </p>
-                            </div>
-                        ))}
+                    {item.icons?.map(icon => (
+                        <div className='flex flex-col items-center pt-[10px]' key={icon.name}
+                            style={{width:` ${100/item.icons.length}%`}}
+                        >
+                            <img src={icon.img} alt={icon.desc} className='h-[50px]'/>
+                            <p className='text-center text-[14px] text-gray-600 CocoGothic_trial'>
+                                {icon.name}
+                            </p>
+                        </div>
+                    ))}
                 </div>
                 }
                 {item.id % 2 == 0 ? (
@@ -111,7 +111,7 @@ return (
                         {item.icons?.map(icon => (
                             <div key={icon.name} 
                                 style={{width:` ${100/item.icons.length}%`}}
-                                className={`flex flex-col items-center `}>
+                                className={`flex flex-col items-center pl-[20px] pt-[20px]`}>
                                 <img src={icon.img} alt={icon.desc} className='h-[50px]'/>
                                 <p className='text-center text-[14px] text-gray-600 CocoGothic_trial'>
                                     {icon.name}

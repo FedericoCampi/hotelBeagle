@@ -6,6 +6,7 @@ import arg from '../images/iconsNavbar/argentina.png'
 import usa from '../images/iconsNavbar/usa.png'
 import brazil from '../images/iconsNavbar/brazil.png'
 import menu from '../images/iconsNavbar/menu.png';
+import { Link } from "react-scroll";
 
 const Navbar = () => {
 
@@ -53,38 +54,38 @@ const Navbar = () => {
                 <h3 className="text-2xl pt-1 h-7">Canal Beagle</h3>
                 <h5 className="text-[15px]">HOTEL</h5>
             </div>
-            <div className="hidden lg:flex  flex-[2_2_0%] w-full h-full items-center">
-                <div className="flex-[2_2_0%] w-full h-full flex gap-9 items-center">
-                    <button>EL HOTEL</button>
-                    <button>FOTOS</button>
-                    <button>SERVICIOS</button>
-                    <button>CONTACTO</button>
+            <div className="hidden lg:flex flex-[3] w-full h-full items-center justify-evenly">
+                <div className="w-6/12 h-full flex gap-9 items-center">
+                    <Link to="hotel" smooth={true} duration={500}>
+                        <button>HOTEL</button>
+                    </Link>
+                    <Link to="habitaciones" smooth={true} duration={500}>
+                        <button>HABITACIONES</button>
+                    </Link>
+                    <Link to="servicios" smooth={true} duration={500}>
+                        <button>SERVICIOS</button>
+                    </Link>
+                    <Link to="contacto" smooth={true} duration={500}>
+                        <button>CONTACTO</button>
+                    </Link>
                 </div>
-                <div className="m-1 flex gap-3 border border-green-600 p-2 rounded-xl"
-                >
-                    {screenWidth > 1200 ? (
-                        <>
-                            <button className="flex items-center gap-1"><img className="w-[30px]" src={arg}/>ES</button>
-                            <div className="w-[1px] bg-white"></div>
-                            <button className="flex items-center gap-1"><img className="w-[30px]" src={usa}/>EN</button>
-                            <div className="w-[1px] bg-white"></div>
-                            <button className="flex items-center gap-1"><img className="w-[30px]" src={brazil}/>PT</button>
-                        </>
-                    ):(
-                        <>
-                            <button className="flex items-center gap-1"><img className="w-[30px]" src={arg}/></button>
-                            <button className="flex items-center gap-1"><img className="w-[30px]" src={usa}/></button>
-                            <button className="flex items-center gap-1"><img className="w-[30px]" src={brazil}/></button>
-                        </>
-                    )}
-                    
-                    
-                </div>
+                {screenWidth > 1200 ? (
+                    <div className='p-2 gap-3 flex border rounded-xl'>
+                        <button className="flex items-center gap-1"><img className="w-[30px]" src={arg}/>ES</button>
+                        <div className="w-[1px] bg-white"></div>
+                        <button className="flex items-center gap-1"><img className="w-[30px]" src={usa}/>EN</button>
+                        <div className="w-[1px] bg-white"></div>
+                        <button className="flex items-center gap-1"><img className="w-[30px]" src={brazil}/>PT</button>
+                    </div>
+                ):(
+                    <div>
+                        <button className="flex items-center gap-1"><img className="w-[30px]" src={arg}/></button>
+                        <button className="flex items-center gap-1"><img className="w-[30px]" src={usa}/></button>
+                        <button className="flex items-center gap-1"><img className="w-[30px]" src={brazil}/></button>
+                    </div>
+                )}
             </div>
             <div className="hidden lg:items-center lg:flex lg:justify-evenly flex-col flex-1 pr-[30px]">
-                <p className="px-[30px] text-[12px] mb-0">
-                    Reservas:+54 02901 436100 (lun a vie 10-18hs, sáb 10-14hs)Recepción:+54 02901 42135
-                </p>
                 <button className="bg-white text-green-800 border border-green-800 p-[10px]"
                     style={{ display: 'inline-block', width: 'fit-content' }}
                 >
@@ -99,7 +100,7 @@ const Navbar = () => {
             </div>
 
             <Offcanvas style={{width:"350px"}} className="" show={show} onHide={handleClose}>
-                <Offcanvas.Header className="bg-[#4c645c]" closeButton>
+                <Offcanvas.Header className="bg-[#1a3b1f]" closeButton>
                 <Offcanvas.Title className="flex justify-center items-center w-full">
                     <img src={logo} className='h-[50px] w-[30px]'/>
                     <div className="text-white font-catchy pl-[15px]">
@@ -108,7 +109,7 @@ const Navbar = () => {
                     </div>
                 </Offcanvas.Title>
                 </Offcanvas.Header>
-                <Offcanvas.Body className="bg-[#4c645c]">
+                <Offcanvas.Body className="bg-[#1a3b1f]">
                     <div className="flex flex-col gap-3 text-white">
                         <button className="p-[10px] w-full border-b border-black">EL HOTEL</button>
                         <button className="p-[10px] w-full border-b border-black">FOTOS</button>

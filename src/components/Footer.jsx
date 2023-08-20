@@ -49,7 +49,7 @@ const Footer = () => {
 
 
 return (
-    <div className='bg-[#1a3b1f] p-[50px] text-white'>
+    <div id='contacto' className='bg-[#1a3b1f] p-[50px] text-white'>
         <div className='flex flex-col'>
             <h3 className='text-4xl font-catchy'>Canal Beagle Hotel</h3>
             <div className='flex items-center'>
@@ -66,7 +66,7 @@ return (
                 style={{ fontSize: `${fontSize}px` }}
             >
                 <p className='py-[5px] font-bold' style={{ fontSize: `${fontSize +10}px` }}>
-                    Oficina de reservas
+                    Reservas
                 </p>
                 <div className='flex flex-col h-[60%] justify-between pt-[10px]'>
                     <div className='flex'>
@@ -93,7 +93,7 @@ return (
             </div>
             <div id="resizableDiv" className='max-w-[400px] flex flex-col w-full grow border border-white py-[15px] px-[25px]'>
                 <p className='pt-[5px] font-bold' style={{ fontSize: `${fontSize +10}px` }}>
-                    Redes sociales
+                    Seguinos en redes sociales
                 </p>
                 <div className='flex flex-col h-[100%] justify-evenly'>
                     <div className='flex gap-4'>
