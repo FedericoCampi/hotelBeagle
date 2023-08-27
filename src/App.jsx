@@ -58,11 +58,11 @@ function App() {
       )}
         <HabYPromo/>
       {screenWidth < 768 ? (
-      <ReviewsMobile/>
+        <ReviewsMobile/>
       ):(
-      <Reviews/>
+        <Reviews/>
       )}
-        <Footer/>
+      <Footer/>
     </div>
   )
 }

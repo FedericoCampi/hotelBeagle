@@ -5,6 +5,7 @@ import spa from '../images/spa.jpg'
 import suitcase from '../images/suitcase.jpg'
 import { useEffect, useState } from 'react'
 import HabMobile from './HabMobile'
+import { MdArrowForwardIos } from 'react-icons/md'
 
 const habitaciones = [
   {
@@ -68,7 +69,10 @@ const HabYPromo = () => {
 
   return (
     <div className='sm:pb-[20px] sm:px-[30px] h-full'>
-      <div id="habitaciones" className='h-full'>
+      <div id="habitaciones" className='h-full relative'>
+          <MdArrowForwardIos 
+            className="absolute top-[40%] right-[5%] text-green-800 text-5xl"
+          />
         <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl sm:pb-[30px] text-green-800 font-catchy'>
           Habitaciones
         </h2>

@@ -6,6 +6,7 @@ import frigobar from '../images/iconsMidSection/frigobar.png'
 import coffee from '../images/iconsMidSection/coffe.png'
 import relax from '../images/iconsMidSection/relax.png'
 import piscina from '../images/piscina.jpg';
+
 const infoMidSection = [
     {
         "id": 1,
@@ -77,7 +78,7 @@ const MidSectionMobile = () => {
                     </div>
                     <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>
                         <h2 className='text-5xl text-green-800 font-catchy border-b-2 border-green-700 text-center'>{item.title}</h2>
-                        <h4 className='text-4xl text-green-800 font-catchy text-center'>{item.subTitle}</h4>
+                        <h4 className='text-3xl text-green-800 font-catchy font-light'>{item.subTitle}</h4>
                         <p className='text-center text-[18px] text-gray-600 
                             CocoGothic_trial'>{item.desc}
                         </p>
