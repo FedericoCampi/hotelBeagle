@@ -1,11 +1,4 @@
-.scrolling-content {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  white-space: nowrap;
-  //position: relative; /* Ensure proper positioning for the background image */
-}
-
+/* ReviewsMobile */
 .background-image {
   position: absolute;
   top: 0;
@@ -17,24 +10,23 @@
   background-position: center;
   z-index: -1;
 }
-.content{
-  scroll-snap-align: center;
-  flex: 0 0 100vw;
+
+
+/* animate icon */
+@keyframes hbounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
-.content-item {
-  flex: 0 0 100vw;
-  scroll-snap-align: center;
-  padding: 1rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+
+.animate-hbounce {
+  animation: hbounce 2s infinite;
 }
-.content-text {
-  max-width: 100%;
-  font-size: 16px; /* Adjust as needed */
-  line-height: 1.4; /* Adjust line height as needed */
-  margin: 0;
-  padding: 0 10px; /* Adjust padding as needed */
-}
+
+
+
+
+
