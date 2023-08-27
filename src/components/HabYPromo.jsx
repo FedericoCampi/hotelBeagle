@@ -3,6 +3,8 @@ import suite from '../images/suite.jpg'
 import laptop from '../images/laptop.jpg'
 import spa from '../images/spa.jpg'
 import suitcase from '../images/suitcase.jpg'
+import { useEffect, useState } from 'react'
+import HabMobile from './HabMobile'
 
 const habitaciones = [
   {
@@ -49,11 +51,31 @@ const promos = [
 ]
 
 const HabYPromo = () => {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const handleResizeScreen = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResizeScreen); // Add event listener for window resize
+    
+        return () => {
+            window.removeEventListener('resize', handleResizeScreen); // Remove event listener on component unmount
+        };
+    }, []);
+
   return (
-    <div className='pb-[20px] px-[30px] sm:px-[50px] h-full'>
+    <div className='sm:pb-[20px] sm:px-[30px] h-full'>
       <div id="habitaciones" className='h-full'>
-        <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>Habitaciones</h2>
-        <div className='flex flex-col sm:flex-row'>
+        <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl sm:pb-[30px] text-green-800 font-catchy'>
+          Habitaciones
+        </h2>
+        {screenWidth < 768 ? (
+          <HabMobile/>
+        ):(
+          <div className='flex flex-col sm:flex-row'>
           {habitaciones?.map(item => (
             <div key={item.id} className='flex flex-col sm:max-h-[400px] w-full sm:w-[35%] py-[10px] px-[10px]'>
               <img src={item.img} alt={item.tipo} className='object-cover min-h[200px] h-[40%]'/>
@@ -69,10 +91,13 @@ const HabYPromo = () => {
             </div>
           ))}
         </div>
+        )}
       </div>
-      <div id="servicios" className='h-full'>
-        <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>Promociones</h2>
-        <div className='flex flex-col sm:flex-row'>
+      <div className='h-full'>
+        <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>
+          Promociones
+        </h2>
+        <div className='flex flex-col sm:flex-row px-[20px]'>
           {promos?.map(item => (
             <div key={item.id} className='flex flex-col sm:max-h-[400px] w-full sm:w-[35%] py-[10px] px-[10px]'>
               <img src={item.img} alt={item.title} className='object-cover max-h-[200px] h-[40%]'/>

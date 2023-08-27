@@ -6,8 +6,25 @@ import Reviews from './components/Reviews'
 import Portada from './components/Portada'
 
 import pic1 from './images/hotelpic1recor.png'
+import { useEffect, useState } from 'react'
+import MidSectionMobile from './components/MidSectionMobile'
+import ReviewsMobile from './components/ReviewsMobile'
 
 function App() {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const handleResizeScreen = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResizeScreen); // Add event listener for window resize
+    
+        return () => {
+            window.removeEventListener('resize', handleResizeScreen); // Remove event listener on component unmount
+        };
+    }, []);
 
   return (
     <div className=''>
@@ -31,12 +48,20 @@ function App() {
           </p>
         </div>
         <div className='h-full w-full md:w-2/4 flex justify-center pt-[30px]'>
-          <img className='h-full pl-0 md:pl-[50px] object-cover' src={pic1}/>
+          <img className='max-h-[300px] sm:max-h-full w-full sm:w-auto pl-0 md:pl-[50px] object-cover' src={pic1}/>
         </div>
       </section>
+      {screenWidth < 768 ? (
+        <MidSectionMobile/>
+      ):(
         <MidSection/>
+      )}
         <HabYPromo/>
-        <Reviews/>
+      {screenWidth < 768 ? (
+      <ReviewsMobile/>
+      ):(
+      <Reviews/>
+      )}
         <Footer/>
     </div>
   )

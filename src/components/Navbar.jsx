@@ -32,17 +32,17 @@ const Navbar = () => {
     
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     
-        const handleResizeScreen = () => {
-            setScreenWidth(window.innerWidth);
-        };
-    
-        useEffect(() => {
+    const handleResizeScreen = () => {
+        setScreenWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
         window.addEventListener('resize', handleResizeScreen); // Add event listener for window resize
-        
-            return () => {
+    
+        return () => {
             window.removeEventListener('resize', handleResizeScreen); // Remove event listener on component unmount
         };
-        }, []);
+    }, []);
 
     return (
         <div className={`h-[125px] bg-[#1a3b1f] z-50 fixed top-0 w-full transition-all 

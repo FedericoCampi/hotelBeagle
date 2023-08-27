@@ -17,17 +17,17 @@ const Reviews = () => {
         };
         }, []);
 
-return (
-    <div className="relative bg-green-800">
+    return (
+        <div className="relative bg-green-800">
             <img src="https://static.wixstatic.com/media/ec3017_4c350e047f064a568ce7404c6144bf57~mv2.jpg/v1/fill/w_665,h_444,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ec3017_4c350e047f064a568ce7404c6144bf57~mv2.jpg" alt='fondoPortada' 
                 className='w-full h-full min-h-[h-screen] object-cover opacity-60 absolute inset-0 z-0'/>
-            <div className='relative z-10 text-[#E7ECEE] w-full flex flex-col 
-                items-center justify-evenly px-[50px] h-full'
+            <div className={`w-full relative z-10 text-[#E7ECEE] flex flex-col 
+                items-center justify-evenly px-[50px] h-full`}
             >
                 <div className='flex items-center flex-1 py-[20px]'>
                     <h2 className='text-7xl font-catchy text-center'>Reseña de viajeros</h2>
                 </div>
-                <div   className={`${screenWidth < 700 ? 'flex flex-wrap text-center' : 'flex'} 
+                <div className={`${screenWidth < 700 ? 'flex flex-wrap text-center' : 'flex'} 
                     h-full w-full gap-16 flex-[2_2_0%] text-[14px] md:text-[1rem]`}
                     >
                     <div className='grow w-full'>
@@ -62,14 +62,14 @@ return (
                         <p className='pt-[20px]'>
                             La verdad muy lindo hotel, bien ubicado, todo super limpio, y la 
                             atención del personal para destacar. Fueron todos muy amables, 
-                            volvería sin duda !
+                            volvería sin duda!
                         </p>
                         <p className='pt-[10px]'><span className='font-bold'>Natalia Sanchez</span> - Google </p>
                     </div>
                 </div>
             </div>
-    </div>
-)
+        </div>
+    )
 }
 
 export default Reviews
