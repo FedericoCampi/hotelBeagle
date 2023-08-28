@@ -76,18 +76,17 @@ const HabMobile = () => {
     return (
         <div className="overflow-x-scroll snap-x snap-mandatory flex">
             {habitaciones?.map((item, index)=> (
-              <div key={item.id} className='flex-shrink-0 w-screen p-8 snap-center'
+              <div key={item.id}
+                className='flex-shrink-0 w-screen p-8 snap-center'
               >
                 <div
-                  className={`${arrowBack === false ? 'hidden' : ''} absolute top-[50%] left-3 animate-hbounce`}
-                  // className="" 
+                  className={`${arrowBack === false ? 'hidden' : ''} absolute top-[35%] left-3 animate-hbounce`}
                   style={{ animationDuration: '2s', animationIterationCount: 'infinite' }}
                   >
                   <MdArrowBackIos className='text-green-800 text-5xl'/>
                 </div>
                 <div
-                  className={`${arrowFoward === false ? 'hidden' : ''} absolute top-[50%] right-3 animate-hbounce`}
-                  // className="" 
+                  className={`${arrowFoward === false ? 'hidden' : ''} absolute top-[35%] right-3 animate-hbounce`}
                   style={{ animationDuration: '2s', animationIterationCount: 'infinite' }}
                   >
                   <MdArrowForwardIos className='text-green-800 text-5xl'/>

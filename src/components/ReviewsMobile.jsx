@@ -1,7 +1,56 @@
 import quotes from '../images/left-quotes-sign.png'
 import '../assets/style.css';
+import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md'
+import { useEffect, useRef, useState } from 'react';
 
 const ReviewsMobile = () => {
+
+    const [arrowBack, setArrowBack] = useState(false);
+    const [arrowFoward, setArrowFoward] = useState(true);
+
+    const scrollContainerRef = useRef(null);
+    const scrollItems = useRef([
+        { ref: useRef(null), isVisible: false },
+        { ref: useRef(null), isVisible: false },
+        { ref: useRef(null), isVisible: false }
+    ]);
+
+    useEffect(() => {
+        const options = {
+        threshold: 0.5 // Adjust threshold as needed
+        };
+
+        const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            const itemIndex = scrollItems.current.findIndex(item => item.ref.current === entry.target);
+            if (entry.isIntersecting) {
+                if(itemIndex === 0){
+                    setArrowBack(false)
+                    setArrowFoward(true)
+                }
+                if(itemIndex === 1){
+                    setArrowBack(true)
+                    setArrowFoward(true)
+                }
+                if(itemIndex === 2){
+                    setArrowBack(true)
+                    setArrowFoward(false)
+                }
+            } 
+        });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, options);
+
+        scrollItems.current.forEach(item => {
+        observer.observe(item.ref.current);
+        });
+
+        return () => {
+        observer.disconnect();
+        };
+    }, []);
+
 
     return (
         <div className="h-full relative overflow-x-scroll snap-x snap-mandatory flex flex-col">
@@ -11,8 +60,24 @@ const ReviewsMobile = () => {
                 </h2>
             </div>
             <div className="background-image"></div>
-            <div className="flex overflow-x-auto snap-x snap-mandatory">
-                <div className="w-screen flex-shrink-0 p-4 snap-center text-white">
+            <div className="flex overflow-x-auto snap-x snap-mandatory"
+                ref={scrollContainerRef}
+            >
+                <div
+                    className={`${arrowBack === false ? 'hidden' : ''} absolute top-[50%] left-3 animate-hbounce`}
+                    style={{ animationDuration: '2s', animationIterationCount: 'infinite' }}
+                >
+                    <MdArrowBackIos className='text-white text-5xl'/>
+                </div>
+                <div
+                    className={`${arrowFoward === false ? 'hidden' : ''} absolute top-[50%] right-3 animate-hbounce`}
+                    style={{ animationDuration: '2s', animationIterationCount: 'infinite' }}
+                    >
+                    <MdArrowForwardIos className='text-white text-5xl'/>
+                </div>
+                <div className="w-screen flex-shrink-0 p-4 snap-center text-white"
+                    ref={scrollItems.current[0].ref}
+                >
                     <img src={quotes} alt='quotes' className='w-[30px]'/>
                     <p className='pt-[20px]'>
                         Muy buenas prestaciones, la calidad del hotel acompaña su excelente ubicación. 
@@ -21,7 +86,9 @@ const ReviewsMobile = () => {
                     </p>
                     <p className='pt-[10px]'><span className='font-bold'>Felipe Maldonado</span> - Google</p>
                 </div>
-                <div className="w-screen flex-shrink-0 p-4 snap-center text-white">
+                <div className="w-screen flex-shrink-0 p-4 snap-center text-white"
+                    ref={scrollItems.current[1].ref}
+                >
                     <img src={quotes} alt='quotes' className='w-[30px]'/>
                     <p className='pt-[20px]'>
                         Excelente hotel!! Muy bien ubicado!!Cerca de todo!! A unos metros de 
@@ -33,7 +100,9 @@ const ReviewsMobile = () => {
                     </p>
                     <p className='pt-[10px]'><span className='font-bold'>Silvia Nisebe</span> - Google</p>
                 </div>
-                <div className="w-screen flex-shrink-0 p-4 snap-center text-white">
+                <div className="w-screen flex-shrink-0 p-4 snap-center text-white"
+                    ref={scrollItems.current[2].ref}
+                >
                     <img src={quotes} alt='quotes' className='w-[30px]'/>
                     <p className='pt-[20px]'>
                         La verdad muy lindo hotel, bien ubicado, todo super limpio, y la 
