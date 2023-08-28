@@ -32,10 +32,11 @@ import { useEffect, useRef, useState } from 'react';
 const HabMobile = () => {
 
   const firstDivRef = useRef(null);
+  const secondDivRef = useRef(null);
   const thirdDivRef = useRef(null);
   const observer = useRef(null);
 
-  const [arrowBack, setArrowBack] = useState(true);
+  const [arrowBack, setArrowBack] = useState(false);
   const [arrowFoward, setArrowFoward] = useState(true);
 
   useEffect(() => {
@@ -44,7 +45,10 @@ const HabMobile = () => {
         if (entry.target === firstDivRef.current) {
           if (entry.isIntersecting) {
             setArrowBack(false)
-          } else {
+          }
+        }
+        if (entry.target === secondDivRef.current) {
+          if (entry.isIntersecting) {
             setArrowBack(true)
           }
         }
@@ -60,6 +64,9 @@ const HabMobile = () => {
 
     if (firstDivRef.current) {
       observer.current.observe(firstDivRef.current);
+    }
+    if (secondDivRef.current) {
+      observer.current.observe(secondDivRef.current);
     }
     if (thirdDivRef.current) {
       observer.current.observe(thirdDivRef.current);
@@ -94,7 +101,7 @@ const HabMobile = () => {
                 <img src={item.img} alt={item.tipo} className='object-cover h-[200px] w-full'/>
                 <div className='flex flex-col justify-between mt-[15px] border border-gray-400 
                     w-full text-gray-600 CocoGothic_trial p-3'
-                    ref={index === 0 ? firstDivRef : index === 2 ? thirdDivRef : null} // Set refs for the first and third divs
+                    ref={index === 0 ? firstDivRef : index === 1 ? secondDivRef : index === 2 ? thirdDivRef : null} // Set refs for the first and third divs
                 >
                     <p>{item.capac}</p>
                     <div className='py-[20px'>

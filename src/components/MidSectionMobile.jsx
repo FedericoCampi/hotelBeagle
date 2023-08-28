@@ -71,15 +71,15 @@ const MidSectionMobile = () => {
         <div>
             {infoMidSection?.map(item => (
                 <div key={item.id} className='border border-green-500'>
-                    <div  className='flex flex-col p-[30px] sm:p-[60px] h-full sm:flex-row sm:border-0'>
+                    <div  className='flex flex-col px-[30px] pt-[20px] sm:p-[60px] h-full sm:flex-row sm:border-0'>
                         <div className='w-full sm:w-2/4 flex justify-center'>
-                            <img src={item.img} alt={item.title} className='max-h-[250px] w-full h-full object-cover'/>
+                            <img src={item.img} alt={item.title} className='max-h-[200px] w-full h-full object-cover'/>
                         </div>
                     </div>
                     <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>
                         <h2 className='text-5xl text-green-800 font-catchy border-b-2 border-green-700 text-center'>{item.title}</h2>
-                        <h4 className='text-3xl text-green-800 font-catchy font-light'>{item.subTitle}</h4>
-                        <p className='text-center text-[18px] text-gray-600 
+                        <h4 className='text-3xl text-green-800 font-light'>{item.subTitle}</h4>
+                        <p className='text-center text-[18px] text-gray-600 px-[30px] py-[5px]
                             CocoGothic_trial'>{item.desc}
                         </p>
                         <div className='flex'>

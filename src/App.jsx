@@ -32,8 +32,8 @@ function App() {
       <div className='relative h-[200vh]'>
         <Portada/>
       </div>
-      <section className='relative z-40 -mt-[100vh] min-h-screen bg-white p-[30px] sm:p-[50px] 
-        py-[75px] block md:flex'
+      <section className='relative z-40 -mt-[100vh] min-h-screen bg-white p-[30px] sm:px-[50px] 
+        py-[30px] block md:flex'
       >
         <div id='hotel' className='w-full md:w-2/4 flex flex-col gap-8'>
           <h3 className='text-4xl sm:text-6xl text-green-800 font-catchy'>Disfrutá en el centro de la ciudad de Ushuaia</h3>

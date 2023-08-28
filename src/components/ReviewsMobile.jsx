@@ -79,7 +79,7 @@ const ReviewsMobile = () => {
                     ref={scrollItems.current[0].ref}
                 >
                     <img src={quotes} alt='quotes' className='w-[30px]'/>
-                    <p className='pt-[20px]'>
+                    <p className='pt-[20px] text-justify'>
                         Muy buenas prestaciones, la calidad del hotel acompaña su excelente ubicación. 
                         El desayuno es muy bueno, las habitaciones son muy cómodas, la limpieza es 
                         eficiente, la atención en general es muy agradable.
@@ -90,7 +90,7 @@ const ReviewsMobile = () => {
                     ref={scrollItems.current[1].ref}
                 >
                     <img src={quotes} alt='quotes' className='w-[30px]'/>
-                    <p className='pt-[20px]'>
+                    <p className='pt-[20px] text-justify'>
                         Excelente hotel!! Muy bien ubicado!!Cerca de todo!! A unos metros de 
                         donde vas las excursiones. A una calle de la principal. <span className='hidden md:block'>Todo el personal 
                         muy cordial!! Siempre dispuesto a ayudar en todo!! </span>Desde la recepción, 
@@ -104,7 +104,7 @@ const ReviewsMobile = () => {
                     ref={scrollItems.current[2].ref}
                 >
                     <img src={quotes} alt='quotes' className='w-[30px]'/>
-                    <p className='pt-[20px]'>
+                    <p className='pt-[20px] text-justify'>
                         La verdad muy lindo hotel, bien ubicado, todo super limpio, y la 
                         atención del personal para destacar. Fueron todos muy amables, 
                         volvería sin duda!
