@@ -62,6 +62,8 @@ function App() {
         <Reviews/>
       )}
       <Footer/>
+      <div>
+    </div>
     </div>
   )
 }
