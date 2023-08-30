@@ -75,14 +75,14 @@ const HabYPromo = () => {
 
   return (
     <div className='sm:pb-[20px] sm:px-[30px] h-full'>
-      <div id="habitaciones" className='h-full' data-aos="fade-up" data-aos-duration="2000">
-        <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl text-green-800 font-catchy'>
+      <div id="habitaciones" className='h-full relative'>
+        <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl text-green-800 font-catchy' data-aos="fade-up" data-aos-duration="2000">
           Habitaciones
         </h2>
         {screenWidth < 768 ? (
           <HabMobile/>
         ):(
-          <div className='flex flex-col sm:flex-row'>
+          <div className='flex flex-col sm:flex-row' data-aos="fade-up" data-aos-duration="2000">
           {habitaciones?.map(item => (
             <div key={item.id} className='flex flex-col sm:max-h-[400px] w-full sm:w-[35%] py-[10px] px-[10px]'>
               <img src={item.img} alt={item.tipo} className='object-cover min-h[200px] h-[40%]'/>
@@ -100,11 +100,11 @@ const HabYPromo = () => {
         </div>
         )}
       </div>
-      <div className='h-full py-[10px]' data-aos="fade-up" data-aos-duration="2000">
-        <h2 className='pb-[20px] text-center text-5xl text-green-800 font-catchy'>
+      <div className='h-full py-[20px]'>
+        <h2 className='pb-[20px] text-center text-5xl text-green-800 font-catchy' data-aos="fade-up" data-aos-duration="2000">
           Promociones
         </h2>
-        <div className='flex flex-col sm:flex-row px-[20px]'>
+        <div className='flex flex-col sm:flex-row px-[20px]' data-aos="fade-up" data-aos-duration="2000">
           {promos?.map(item => (
             <div key={item.id} className='flex flex-col sm:max-h-[400px] w-full sm:w-[35%] py-[10px] px-[10px]'>
               <img src={item.img} alt={item.title} className='object-cover max-h-[200px] h-[40%]'/>

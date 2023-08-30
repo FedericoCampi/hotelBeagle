@@ -7,6 +7,10 @@ import coffee from '../images/iconsMidSection/coffe.png'
 import relax from '../images/iconsMidSection/relax.png'
 import piscina from '../images/piscina.jpg';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
+
 const infoMidSection = [
     {
         "id": 1,
@@ -67,16 +71,23 @@ const infoMidSection = [
 
 const MidSectionMobile = () => {
 
+    useEffect(() => {
+
+        AOS.init();
+        AOS.refresh();
+
+    }, []);
+
     return (
         <div>
             {infoMidSection?.map(item => (
                 <div key={item.id} className='border border-green-500'>
-                    <div  className='flex flex-col px-[30px] pt-[20px] sm:p-[60px] h-full sm:flex-row sm:border-0'>
+                    <div  className='flex flex-col px-[30px] pt-[20px] sm:p-[60px] h-full sm:flex-row sm:border-0' data-aos="fade-right" data-aos-duration="2000">
                         <div className='w-full sm:w-2/4 flex justify-center'>
                             <img src={item.img} alt={item.title} className='max-h-[200px] w-full h-full object-cover'/>
                         </div>
                     </div>
-                    <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>
+                    <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly' data-aos="fade-left" data-aos-duration="2000">
                         <h2 className='text-5xl text-green-800 font-catchy border-b-2 border-green-700 text-center'>{item.title}</h2>
                         <h4 className='text-3xl text-green-800 font-light'>{item.subTitle}</h4>
                         <p className='text-center text-[18px] text-gray-600 px-[30px] py-[5px]

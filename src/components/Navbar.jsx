@@ -113,9 +113,9 @@ const Navbar = () => {
                 </Offcanvas.Header>
                 <Offcanvas.Body className="bg-[#1a3b1f]">
                     <div className="flex flex-col gap-3 text-white">
-                        <button className="p-[10px] w-full border-b border-black">EL HOTEL</button>
-                        <button className="p-[10px] w-full border-b border-black">FOTOS</button>
-                        <button className="p-[10px] w-full border-b border-black">SERVICIOS</button>
+                        <button className="p-[10px] w-full border-b border-white">EL HOTEL</button>
+                        <button className="p-[10px] w-full border-b border-white">FOTOS</button>
+                        <button className="p-[10px] w-full border-b border-white">SERVICIOS</button>
                         <button>CONTACTO</button>
                     </div>
                     <div className="my-[20px] py-[10px] flex w-full justify-center gap-3
