@@ -7,6 +7,10 @@ import coffee from '../images/iconsMidSection/coffe.png'
 import relax from '../images/iconsMidSection/relax.png'
 import piscina from '../images/piscina.jpg';
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react'
+
 const infoMidSection = [
     {
         "id": 1,
@@ -66,15 +70,21 @@ const infoMidSection = [
 ]
 
 const MidSection = () => {
-    
+
+    useEffect(() => {
+
+        AOS.init();
+        AOS.refresh();
+
+    }, []);
 
 return (
     <div id="servicios" className=''>
         {infoMidSection?.map(item => (
             <div key={item.id} className='flex flex-col p-[30px] sm:p-[60px] h-full border border-green-500 sm:flex-row sm:border-0'>
                 {item.id % 2 == 1 ? (
-                    <div className='w-full sm:w-2/4 flex justify-center'>
-                        <img src={item.img} alt={item.title} className='h-full object-cover'/>
+                    <div className='w-full sm:w-2/4 flex justify-center' >
+                        <img src={item.img} alt={item.title} className='h-full object-cover' data-aos="fade-right" data-aos-duration="2000"/>
                     </div>
                 ):
                 <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>
@@ -97,7 +107,7 @@ return (
                 }
                 {item.id % 2 == 0 ? (
                     <div className='w-full sm:w-2/4 flex justify-center'>
-                        <img src={item.img} alt={item.title} className='h-full object-cover'/>
+                        <img src={item.img} alt={item.title} className='h-full object-cover' data-aos="fade-left" data-aos-duration="2000"/>
                     </div>
                 ):
                 <div className='w-full sm:w-2/4 flex flex-col items-center p-[20px] sm:p-[40px] justify-evenly'>

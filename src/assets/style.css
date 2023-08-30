@@ -21,11 +21,22 @@
     transform: translateX(5px);
   }
 }
-
 .animate-hbounce {
   animation: hbounce 2s infinite;
 }
 
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUpAnimation 3s ease forwards;
+}
+@keyframes fadeUpAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 

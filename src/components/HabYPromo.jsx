@@ -6,6 +6,9 @@ import suitcase from '../images/suitcase.jpg'
 import { useEffect, useState } from 'react'
 import HabMobile from './HabMobile'
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const habitaciones = [
   {
     "id": 1,
@@ -59,6 +62,10 @@ const HabYPromo = () => {
     };
 
     useEffect(() => {
+
+        AOS.init();
+        AOS.refresh();
+
         window.addEventListener('resize', handleResizeScreen); // Add event listener for window resize
     
         return () => {
@@ -68,7 +75,7 @@ const HabYPromo = () => {
 
   return (
     <div className='sm:pb-[20px] sm:px-[30px] h-full'>
-      <div id="habitaciones" className='h-full relative'>
+      <div id="habitaciones" className='h-full relative' data-aos="fade-up" data-aos-duration="2000">
         <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl sm:pb-[30px] text-green-800 font-catchy'>
           Habitaciones
         </h2>
@@ -93,7 +100,7 @@ const HabYPromo = () => {
         </div>
         )}
       </div>
-      <div className='h-full'>
+      <div className='h-full' data-aos="fade-up" data-aos-duration="2000">
         <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>
           Promociones
         </h2>
