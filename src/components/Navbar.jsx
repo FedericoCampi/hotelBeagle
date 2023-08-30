@@ -8,6 +8,8 @@ import brazil from '../images/iconsNavbar/brazil.png'
 import menu from '../images/iconsNavbar/menu.png';
 import { Link } from "react-scroll";
 
+import '../assets/style.css';
+
 const Navbar = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
@@ -86,7 +88,7 @@ const Navbar = () => {
                 )}
             </div>
             <div className="hidden lg:items-center lg:flex lg:justify-evenly flex-col flex-1 pr-[30px]">
-                <button className="bg-white text-green-800 border border-green-800 p-[10px]"
+                <button className="text-white glass-back p-[10px] font-bold"
                     style={{ display: 'inline-block', width: 'fit-content' }}
                 >
                     RESERVAR AHORA
@@ -116,17 +118,17 @@ const Navbar = () => {
                         <button className="p-[10px] w-full border-b border-black">SERVICIOS</button>
                         <button>CONTACTO</button>
                     </div>
-                    <div className="my-[20px] py-[10px] flex w-full justify-center gap-3 
-                    text-white border border-green-600 rounded-xl"
+                    <div className="my-[20px] py-[10px] flex w-full justify-center gap-3
+                    text-white border rounded-xl"
                     >
                         <button className="flex items-center gap-1"><img className="w-[30px]" src={arg}/>ES</button>
-                        <div className="w-[1px] bg-black"></div>
+                        <div className="w-[1px] bg-white"></div>
                         <button className="flex items-center gap-1"><img className="w-[30px]" src={usa}/>EN</button>
-                        <div className="w-[1px] bg-black"></div>
+                        <div className="w-[1px] bg-white"></div>
                         <button className="flex items-center gap-1"><img className="w-[30px]" src={brazil}/>PT</button>
                     </div>
                     <div className="text-white flex flex-col items-center">
-                        <button className="bg-white text-green-800 border border-green-800 p-[10px] w-[70%]"
+                        <button className="text-white glass-back p-[10px] w-[70%] font-bold"
                             style={{ display: 'inline-block' }}
                         >
                             RESERVAR AHORA

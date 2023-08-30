@@ -10,6 +10,13 @@ import "aos/dist/aos.css";
 
 const Portada = () => {
 
+    const handleButtonClick = () => {
+        window.scrollBy({
+            top: window.innerHeight - 130, // Scroll down by 200px
+            behavior: 'smooth'
+        });
+    };
+
     useEffect(() => {
 
         AOS.init();
@@ -34,16 +41,15 @@ const Portada = () => {
                     <p className='text-center text-[90px] sm:text-[110px] md:text-[130px] h-[80px] sm:h-[130px]'>Canal Beagle</p>
                     <p className='text-[50px] md:text-[80px] text-start'>Hotel</p>
                 </div>
-                <div className='fade-up flex flex-col items-center'>
-                    <button className='text-green-800 bg-white h-[35px] w-[180px] sm:h-[45px] sm:w-[200px] CocoGothic_trial font-bold' >
+                <div className='fade-up flex flex-col items-center' onClick={handleButtonClick}>
+                    <button className='text-white h-[35px] w-[180px] sm:h-[40px] sm:w-[200px] CocoGothic_trial font-bold glass-back'>
                         DESPLAZAR PARA MÁS
                     </button>
-                    <img src={downarrow} className='w-[40px] animate-bounce pt-[10px]'
+                    <img src={downarrow} className='w-[40px] animate-bounce pt-[10px] cursor-pointer'
                         style={{ animationDuration: '2s', animationIterationCount: 'infinite' }}
                     />
                 </div>
             </div>
-            
         </div>
     )
 }

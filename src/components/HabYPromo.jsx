@@ -75,8 +75,8 @@ const HabYPromo = () => {
 
   return (
     <div className='sm:pb-[20px] sm:px-[30px] h-full'>
-      <div id="habitaciones" className='h-full relative' data-aos="fade-up" data-aos-duration="2000">
-        <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl sm:pb-[30px] text-green-800 font-catchy'>
+      <div id="habitaciones" className='h-full' data-aos="fade-up" data-aos-duration="2000">
+        <h2 className='pt-[30px] sm:py-[30px] text-center text-5xl text-green-800 font-catchy'>
           Habitaciones
         </h2>
         {screenWidth < 768 ? (
@@ -100,8 +100,8 @@ const HabYPromo = () => {
         </div>
         )}
       </div>
-      <div className='h-full' data-aos="fade-up" data-aos-duration="2000">
-        <h2 className='py-[30px] text-center text-5xl pb-[30px] text-green-800 font-catchy'>
+      <div className='h-full py-[10px]' data-aos="fade-up" data-aos-duration="2000">
+        <h2 className='pb-[20px] text-center text-5xl text-green-800 font-catchy'>
           Promociones
         </h2>
         <div className='flex flex-col sm:flex-row px-[20px]'>

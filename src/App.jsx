@@ -40,7 +40,7 @@ function App() {
       <div className='relative h-[200vh]'>
         <Portada/>
       </div>
-      <section className='relative z-40 -mt-[100vh] min-h-screen bg-white pt-[40px] sm:px-[50px] block md:flex'
+      <section className='px-[30px] pb-[10px] relative z-40 -mt-[100vh] min-h-screen bg-white pt-[40px] sm:px-[50px] block md:flex'
       >
         <div id='hotel' className='w-full md:w-2/4 flex flex-col gap-8' data-aos="fade-right" data-aos-duration="2000">
           <h3 className='text-4xl sm:text-6xl text-green-800 font-catchy'>Disfrutá en el centro de la ciudad de Ushuaia</h3>
@@ -54,8 +54,8 @@ function App() {
             importantes de la ciudad.
           </p>
         </div>
-        <div className='h-full w-full md:w-2/4 flex justify-center pt-[30px]' data-aos="fade-down" data-aos-duration="2000">
-          <img className='max-h-[300px] sm:max-h-full w-full sm:w-auto pl-0 md:pl-[50px] object-cover' src={pic1}/>
+        <div className='max-h-screen w-full md:w-2/4 flex justify-center pt-[15px] pb-[50px]' data-aos="fade-down" data-aos-duration="2000">
+          <img className='max-h-[350px] sm:max-h-full w-full sm:w-auto pl-0 md:pl-[50px] object-cover' src={pic1}/>
         </div>
       </section>
       <Navbar/>

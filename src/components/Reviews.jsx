@@ -18,11 +18,11 @@ const Reviews = () => {
         }, []);
 
     return (
-        <div className="relative bg-green-800">
+        <div className="relative bg-[#1a3b1f]">
             <img src="https://static.wixstatic.com/media/ec3017_4c350e047f064a568ce7404c6144bf57~mv2.jpg/v1/fill/w_665,h_444,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/ec3017_4c350e047f064a568ce7404c6144bf57~mv2.jpg" alt='fondoPortada' 
                 className='w-full h-full min-h-[h-screen] object-cover opacity-60 absolute inset-0 z-0'/>
             <div className={`w-full relative z-10 text-[#E7ECEE] flex flex-col 
-                items-center justify-evenly px-[50px] h-full`}
+                items-center justify-evenly py-[15px] px-[50px] h-full`}
             >
                 <div className='flex items-center flex-1 py-[20px]'>
                     <h2 className='text-7xl font-catchy text-center'>Reseña de viajeros</h2>
