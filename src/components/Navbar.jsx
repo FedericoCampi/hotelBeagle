@@ -58,16 +58,16 @@ const Navbar = () => {
             </div>
             <div className="hidden lg:flex flex-[3] w-full h-full items-center justify-evenly">
                 <div className="w-6/12 h-full flex gap-9 items-center">
-                    <Link to="hotel" smooth={true} duration={500}>
+                    <Link to="hotel" smooth={true} duration={200}>
                         <button>HOTEL</button>
                     </Link>
-                    <Link to="habitaciones" smooth={true} duration={500}>
+                    <Link to="habitaciones" smooth={true} duration={200}>
                         <button>HABITACIONES</button>
                     </Link>
-                    <Link to="servicios" smooth={true} duration={500}>
+                    <Link to="servicios" smooth={true} duration={200}>
                         <button>SERVICIOS</button>
                     </Link>
-                    <Link to="contacto" smooth={true} duration={500}>
+                    <Link to="contacto" smooth={true} duration={200}>
                         <button>CONTACTO</button>
                     </Link>
                 </div>
