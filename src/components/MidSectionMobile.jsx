@@ -1,6 +1,4 @@
 import caja from '../images/iconsMidSection/cajaFuerte.png'
-import wifi from '../images/iconsMidSection/wifi.png'
-import secador from '../images/iconsMidSection/secador.png'
 import tv from '../images/iconsMidSection/tv.png'
 import frigobar from '../images/iconsMidSection/frigobar.png'
 import coffee from '../images/iconsMidSection/coffe.png'
@@ -22,14 +20,6 @@ const infoMidSection = [
             {
                 "img": caja,
                 "name": "Caja de seguridad"
-                },
-            {
-                "img": wifi,
-                "name": "Wifi de alta velocidad"
-            },
-            {
-                "img": secador,
-                "name": "Secador de cabello"
             },
             {
                 "img": tv,

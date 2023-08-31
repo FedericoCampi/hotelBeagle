@@ -51,11 +51,13 @@ function App() {
           <p className='text-[17px] sm:text-[20px] text-gray-600 CocoGothic_trial'>
             Se encuentra situado en la misma manzana que el Hard Rock Café Ushuaia y se puede 
             llegar caminando a los principales comercios y museos y a los restaurantes más 
-            importantes de la ciudad.
+            importantes de la ciudad.<span className='hidden 2xl:block'>Sumérgete en una experiencia inigualable 
+              mientras exploras la belleza natural y la cultura vibrante de Ushuaia desde la comodidad y 
+              el estilo incomparables del Hotel Marítimo del Canal.</span>
           </p>
         </div>
         <div className='max-h-screen w-full md:w-2/4 flex justify-center pt-[15px] pb-[50px]' data-aos="fade-down" data-aos-duration="2000">
-          <img className='max-h-[350px] sm:max-h-full w-full sm:w-auto pl-0 md:pl-[50px] object-cover' src={pic1}/>
+          <img className='max-h-full w-full sm:w-auto pl-0 md:pl-[50px] object-cover' src={pic1}/>
         </div>
       </section>
       <Navbar/>
