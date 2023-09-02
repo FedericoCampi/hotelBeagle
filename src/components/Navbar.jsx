@@ -20,17 +20,15 @@ const Navbar = () => {
             const currentScrollPos = window.pageYOffset;
             setIsScrolled(currentScrollPos > prevScrollPos);
             setPrevScrollPos(currentScrollPos);
-        };
-
+        }
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [prevScrollPos]);
-
+    
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     
