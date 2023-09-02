@@ -1,9 +1,7 @@
-import caja from '../images/iconsMidSection/cajaFuerte.png'
-import tv from '../images/iconsMidSection/tv.png'
-import frigobar from '../images/iconsMidSection/frigobar.png'
 import coffee from '../images/iconsMidSection/coffe.png'
 import relax from '../images/iconsMidSection/relax.png'
 import piscina from '../images/piscina.jpg';
+import bed from '../images/iconsMidSection/bed.jpeg'
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,17 +16,9 @@ const infoMidSection = [
         "desc": "Comodidad y diseño en nuestras 54 habitaciones y 4 suites amplias con bañera disponibles para su estadía",
         "icons":[
             {
-                "img": caja,
-                "name": "Caja de seguridad"
+                "img": bed,
+                "name": "Todas las comodidades incluídas"
             },
-            {
-                "img": tv,
-                "name": "TV con cable"
-            },
-            {
-                "img": frigobar,
-                "name": "Frigobar"
-            }
         ]
     },
     {

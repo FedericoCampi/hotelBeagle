@@ -36,20 +36,20 @@ const promos = [
   {
     "id": 1,
     "img": laptop,
-    "title": "Early bird discount",
-    "desc": "List your offers, promos, or special membership privileges and perks here to entice people to book your property.",
+    "title": "Una noche free",
+    "desc": "Reserva 3 noches y te regalamos una free",
   },
   {
     "id": 2,
     "img": spa,
-    "title": "Wellhall members Club",
-    "desc": "List your offers, promos, or special membership privileges and perks here to entice people to book your property.",
+    "title": "Spa y relax",
+    "desc": "Disfruta de un día de Spa, pileta Climatizada y masajes",
   },
   {
     "id": 3,
     "img": suitcase,
-    "title": "Book 3 nights, get 1 night free",
-    "desc": "List your offers, promos, or special membership privileges and perks here to entice people to book your property.",
+    "title": "20% de Descuento",
+    "desc": "Reserva directamente desde nuestro motor y obtené el mejor precio",
   }
 ]
 
